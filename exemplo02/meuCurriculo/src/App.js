@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Image, Text, Alert, TouchableOpacity } from 'react-native';
 
-import iconGitHub from '../src/scripts.js';
+import Card from './components/Card';
 
 import yuriyuri from './assets/yuriyuri.jpeg';
 import github from './assets/github.png';
@@ -57,33 +57,18 @@ const App = () => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={style.card_container}>
-          <View style={style.card}>
-            <View style={style.card_header}>
-              <Text style={{ textAlign: 'center', fontWeight: 'bold' }}>Experiência Profissional</Text>
-            </View>
 
-            <View style={style.card_content}>
-              <Text style={style.card_content_text}>ADVOCACIA BELLINATI PEREZ</Text>
-              <Text style={style.card_content_text}>[ Insira sua experiência aqui ...]</Text>
-              <Text style={style.card_content_text}>[ Insira sua experiência aqui ...]</Text>
-            </View>
-          </View>
-        </View>
+        <Card titulo="Formação Acadêmica">
+          <Text style={style.card_content_text}>ADS - UniFCV</Text>
+          <Text style={style.card_content_text}>HTML e CSS</Text>
+          <Text style={style.card_content_text}>JavaScript</Text>
+        </Card>
+        <Card titulo="Experiências Profissionais">
+          <Text style={style.card_content_text}>Advocacia Bellinati Perez</Text>
+          <Text style={style.card_content_text}>[...]</Text>
+          <Text style={style.card_content_text}>[...]</Text>
+        </Card>
 
-        <View style={style.card_container}>
-          <View style={style.card}>
-            <View style={style.card_header}>
-              <Text style={{ textAlign: 'center', fontWeight: 'bold' }}>Formação Acadêmica</Text>
-            </View>
-
-            <View style={style.card_content}>
-              <Text style={style.card_content_text}>ADS - UniFCV</Text>
-              <Text style={style.card_content_text}>HTML e CSS</Text>
-              <Text style={style.card_content_text}>JavaScript</Text>
-            </View>
-          </View>
-        </View>
 
       </View>
     </>
@@ -133,28 +118,12 @@ const style = StyleSheet.create({
     width: '45%',
     marginTop: 13,
   },
-  card_container: {
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 20,
-  },
-  card: {
-    width: '60%',
-    borderRadius: 5,
-    borderWidth: 1,
-    borderColor: '#939393',
-    padding: 10,
-    backgroundColor: '#FFF'
-  },
-  card_content: {
-    marginTop: 10,
-  },
   card_content_text: {
     color: '#939393',
     marginBottom: 10,
     textAlign: 'center',
-  },
+  }
+
 
 })
 
